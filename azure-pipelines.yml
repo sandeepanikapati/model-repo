@@ -23,5 +23,12 @@ steps:
   inputs:
     jfrogPlatformConnection: 'hts2'
     useCustomVersion: true
-    cliVersion: 'v2.77.0'
+    cliVersion: '2.77.0'
     command: 'jf rt ping'
+
+- task: JFrogToolsInstaller@1
+  inputs:
+    artifactoryConnection: 'hts2_art'
+    cliInstallationRepo: 'jfrog-cli-v2'
+    installCustomVersion: true
+    cliVersion: '2.77.0'
