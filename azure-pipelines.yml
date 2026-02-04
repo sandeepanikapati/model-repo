@@ -27,4 +27,4 @@ steps:
     artifactoryConnection: 'hts2_art'
     cliInstallationRepo: 'jfrog-cli-v2'
     installCustomVersion: true
-    cliVersion: '2.78.0'
+    cliVersion: '2.77.0'
