@@ -18,14 +18,6 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-
-- task: JfrogCliV2@1
-  inputs:
-    jfrogPlatformConnection: 'hts2'
-    useCustomVersion: true
-    cliVersion: '2.77.0'
-    command: 'jf rt ping'
-
 - task: JFrogToolsInstaller@1
   inputs:
     artifactoryConnection: 'hts2_art'
