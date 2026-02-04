@@ -1,14 +1,10 @@
 trigger:
 - main
 
-variables:
-  AGENT_TOOLSDIRECTORY: $(Agent.TempDirectory)/toolcache
-
 pool:
   vmImage: ubuntu-latest
 
 steps:
-
 - script: |
     node -v
     npm -v
@@ -20,6 +16,11 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
   displayName: 'Run a multi-line script'
+
+- script: |
+    sudo rm -rf /opt/hostedtoolcache/jf
+    sudo rm -rf /opt/hostedtoolcache/_jf
+  displayName: 'Clear JFrog CLI cache'
 
 - task: JFrogToolsInstaller@1
   inputs:
