@@ -23,5 +23,5 @@ steps:
   inputs:
     jfrogPlatformConnection: 'hts2'
     useCustomVersion: true
-    cliVersion: '2.77.0'
+    cliVersion: 'v2.77.0'
     command: 'jf rt ping'
